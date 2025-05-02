@@ -45,7 +45,9 @@ export MANPAGER='nvim +Man!'
 
 # TMUX
 export TMUX_CONF=\$HOME/.config/tmux/tmux.conf
-tmux source-file \$TMUX_CONF
+if [ -n \"\$TMUX\" ]; then
+    tmux source-file "$TMUX_CONF"
+fi
 "
 
 # grep is not good with multiline inputs so just check for the first
