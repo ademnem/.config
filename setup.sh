@@ -4,26 +4,31 @@
 # make sure everthing is up to date first
 sudo apt upgrade
 
-echo "Checking for neovim..."
+echo -n "Checking for nvim... "
 if ! snap list nvim &> /dev/null; then
-    echo "nvim was not found. Installing nvim..."
+    echo "Done"
+    echo -n "Installing nvim... "
     sudo snap install neovim
+    echo "Done"
 else
-    echo "nvim was already installed"
+    echo "Found"
 fi
 
 
 apt_pkgs=(
-    "npm"
-    "ripgrep"
+    "cmake" # clangd
+    "npm" # webdev
+    "ripgrep" # nvim
 )
 for name in "${apt_pkgs[@]}"; do
-    echo "Checking for $name..."
+    echo -n "Checking for $name... "
     if ! dpkg -s "$name" &> /dev/null; then
-        echo "$name was not found. Installing $name..."
+        echo "Done"
+        echo -n "Installing $name... "
+        echo "Done"
         sudo apt install "$name"
     else 
-        echo "$name was already installed"
+        echo "Found"
     fi
 done
 
@@ -44,10 +49,13 @@ tmux source-file \$TMUX_CONF
 "
 
 # grep is not good with multiline inputs so just check for the first
+echo -n "Check for lines in .bashrc... "
 if ! grep -qF "# SETUP ADDITIONS" "$HOME/.bashrc"; then
+    echo "Done"
+    echo -n "Adding lines... "
     echo "$lines" >> "$HOME/.bashrc"
-    echo "Lines added to .bashrc"
+    echo "Done"
     source "$HOME/.bashrc"
 else
-    echo "Lines already in .bashrc"
+    echo "Found"
 fi
