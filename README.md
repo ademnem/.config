@@ -45,5 +45,5 @@ Now if you are using Windows and WSL2 then you need to download a [Nerd Font](ht
 - just [TJ DeVries](https://github.com/tjdevries) (for everything, great youtube videos)
 - [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim/tree/master) (most beginner friendly setup, easy to read and follow along)
 - [typecraft youtube tutorials](https://www.youtube.com/watch?v=zHTeCSVAFNY&list=PLsz00TDipIffreIaUNk64KxTIkQaGguqn) (has a nice nvim series for starters)
-- [folke's dot files](https://github.com/folke/dot) (because makes everything in neovim)
+- [folke's dot files](https://github.com/folke/dot) (makes everything in neovim)
 - [LazyVim](https://github.com/LazyVim/LazyVim)
