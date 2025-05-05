@@ -6,12 +6,12 @@ return {
 		dependencies = { "nvim-lua/plenary.nvim" },
 		lazy = false,
 		keys = {
-			{ "<leader>df", require("telescope.builtin").find_files, desc = "directory find" },
-			{ "<leader>sf", require("telescope.builtin").live_grep, desc = "string find (using ripgrep)" },
+			{ "<leader>pf", require("telescope.builtin").find_files, desc = "[P]roject [F]ind" },
+			{ "<leader>ps", require("telescope.builtin").live_grep, desc = "[P]roject [S]earch" },
 			{
 				"<leader>ff",
 				require("telescope.builtin").current_buffer_fuzzy_find,
-				desc = "fuzzy find in current buffer",
+				desc = "[F]uzzy [F]ind",
 			},
 			{ "<leader>gf", require("telescope.builtin").git_files, desc = "search for files tracked by git" },
 		},
