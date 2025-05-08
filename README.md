@@ -17,6 +17,7 @@ These will not be managed by [lazy.nvim](https://github.com/folke/lazy.nvim/tree
 - ubuntu v24.04
 
 ## Future Additions
+- mason.nvim is getting major update so i need to change that soon
 - debugger (because i code in languages other than RUST)
 - probably how to configure luasnip and lsps better
 - figure out how to get a rust lsp working properly
